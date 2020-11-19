@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.example.hibernateCRUD.Employee" table="employee">  
+    <id name="id">  
+     <generator class="increment"></generator>  
+    </id>  
+            
+    <property name="firstName" column="first_name" type="string"></property>  
+    <property name="lastName" column="last_name" type="string"></property>
+    <property name="salary" column="salary" type="int"></property>  
+    <property name="date" column="date" type="date"></property>
+    
+    <many-to-one name="department" class="com.example.hibernateCRUD.Department"
+            column="dept_id" unique="false" not-null="true"
+            cascade="all" />
+    
+            
+  </class>  
+            
+ </hibernate-mapping>  

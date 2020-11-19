@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.example.hibernateCRUD.Department" table="department">  
+    <id name="id">  
+     <generator class="increment"></generator>  
+    </id>  
+            
+    <property name="deptName" column="department_Name" type="string"></property>  
+    <property name="numberEmployees" column="number_Employees" type="int"></property>
+    <property name="projectName" column="project_Name" type="string"></property>  
+            
+  </class>  
+            
+ </hibernate-mapping>  
